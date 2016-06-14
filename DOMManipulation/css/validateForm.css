@@ -1,0 +1,12 @@
+a, a:active, a:hover{
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.input_fields_wrap, .sbm{
+    padding: 5px;
+}
+.error{
+    color:red;
+    opacity: 0.7;
+    vertical-align: top
+}

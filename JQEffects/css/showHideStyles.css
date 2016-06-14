@@ -1,0 +1,22 @@
+	/* This CSS is just for presentational purposes. */
+	
+	#wrap {
+		font: 1.3em/1.3 Arial, Helvetica, sans-serif;
+		width: 30em;
+		margin: 0 auto;
+		padding: 1em;
+		background-color: #fff; }
+	h1 {
+		font-size: 200%; }
+
+	/* This CSS is used for the Show/Hide functionality. */
+	.more {
+		display: none;
+ }
+	a.showLink, a.hideLink {
+		text-decoration: none;
+		color: #36f;
+	
+	}
+
+	

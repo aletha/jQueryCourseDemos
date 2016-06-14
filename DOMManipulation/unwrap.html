@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>unwrap demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <button id="btn1">wrap</button>
+  <button id="btn2">unwrap</button>
+
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+
+<script>
+var pTags = $( "p" );
+$( "#btn1" ).click(function() {
+    //pTags.wrapAll( "<div></div>" );
+    pTags.wrap( "<div></div>" );
+}); 
+
+$( "#btn2" ).click(function() {
+  
+    pTags.unwrap();
+ 
+});
+
+ 
+
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+body
+{
+    font-family: Arial;
+    font-size : 14pt;
+    padding: 10pt;
+    color : Green
+}
+
+.highlight
+{
+    font-size: 18pt;
+    font-weight:Bold;
+    color: Blue;
+}
+
+</style>
+</head>
+<body>
+<form>
+    <div id="dvParent">
+   <div id="dvjQuery">jQuery Example: detach(). </div>
+    </div>
+    <br/><br/>
+    <input type='button' id='btnRemove' Value=' Detach Div ' />
+    <input type='button' id='btnAdd' Value='  Add Div  ' />
+    <br/><br/>
+</form>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+/*
+see http://jsperf.com/remove-vs-hide/10
+for performance comparison
+detach() is faster than remove() is faster that display:none or css("display", "none")
+*/
+$(document).ready(function() {
+    var dvjQuery = null;
+    $('#btnAdd').attr('disabled','disabled');
+    
+    $("#dvjQuery").hover(function() {
+        $(this).addClass('highlight');
+    }, function() {
+        $(this).removeClass('highlight');
+    });
+
+    $('#btnRemove').click(function() {
+        dvjQuery = $("#dvjQuery").detach();
+        $(this).attr('disabled','disabled');
+        $('#btnAdd').removeAttr('disabled');
+    });
+    
+    $('#btnAdd').click(function() {
+        $("#dvParent").html(dvjQuery);
+         $(this).attr('disabled','disabled');
+        $('#btnRemove').removeAttr('disabled');
+    });
+});
+</script>
+</body>
+</html>

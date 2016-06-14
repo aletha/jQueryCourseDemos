@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Developing Plugins</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+   
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="customutilityfunctions.js"></script>
+    <script src="custommethod.js"></script>
+    <script type="text/javascript">
+   
+      $(document).ready(function(){
+      //use custom utility functions sum and average
+      /*
+       var total = $.sum([100, 2, 33]);
+       var avg = $.average([100, 200, 300]);
+       */
+      var total = $.numUtils.sum([100, 2, 33]);
+      var avg = $.numUtils.average([100, 200, 300]);
+      $("#span1").html(total);
+      $("#span2").html(avg);
+      
+      //use custom method highlight
+      $("span").redify();
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    Sum is <span id="span1"></span>
+    <br>
+    Average is: <span id="span2"></span>
+  </body>
+</html>

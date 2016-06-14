@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>unwrap demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  
+  <button id="btn2">unwrap</button>
+<div>
+  <p>Hello</p>
+  <p>cruel</p>
+  <p>World</p>
+</div>
+<script>
+var pTags = $( "p" );
+
+
+$( "#btn2" ).click(function() {
+  
+    pTags.unwrap();
+ 
+});
+
+ 
+
+</script>
+ 
+</body>
+</html>
